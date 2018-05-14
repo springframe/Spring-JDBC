@@ -1,0 +1,40 @@
+package com.qa.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+
+import com.qa.bo.CustomerBO;
+
+public class CustomerDAOImpl implements CustomerDAO {
+	private final String SQL_QRY_INSERT="INSERT INTO CUST_JDBC(SNO,FNAME,LNAME,EMAILADRESS,MBNO) VALUES(?,?,?,?,?)";
+	private final String SQL_QRY_INSERT_By_KeyAutoGenerate="INSERT INTO CUST_JDBC(SNO,FNAME,LNAME,EMAILADRESS,MBNO) VALUES(?,?,?,?)";
+	private JdbcTemplate jt;
+	
+	public void setJt(JdbcTemplate jt) {
+		this.jt = jt;
+	}
+
+	@Override
+	public Object InsertCustBoByAutoGenerate(CustomerBO cbo) {
+
+		GeneratedKeyHolder gkh=new GeneratedKeyHolder();
+		Object sno=0;
+		int r=jt.update(new InsertProjectStatementCreator(project),gkh);
+		return null;
+	}
+
+	 private final class InsertProjectStatementCreator implements PreparedStatementCreator {
+	private CustomerBO cbo;
+
+	@Override
+	public PreparedStatement createPreparedStatement(Connection arg0) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
+

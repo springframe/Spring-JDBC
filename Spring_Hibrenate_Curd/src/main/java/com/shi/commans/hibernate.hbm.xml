@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+<class name="com.shi.entity.Employee" table="tb_spring_hibernate_curd">
+<id name="sid" column="s_id" length="20"/>
+<property name="fname" column="f_name" length="20"/>
+<property name="lname" column="l_name" length="20"/>
+<property name="emailAdress" column="email_adress" length="20"/>
+<property name="mbno" column="mbno" length="20"/>
+
+</class>
+</hibernate-mapping>
+
+

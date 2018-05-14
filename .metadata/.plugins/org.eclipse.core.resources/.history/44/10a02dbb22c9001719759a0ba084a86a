@@ -1,0 +1,6 @@
+package com.qa.dao;
+
+public interface  CustomerDAO {
+	public List<CustomerBO> findDetail(int no);
+
+}

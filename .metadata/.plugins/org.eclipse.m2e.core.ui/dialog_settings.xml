@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\STSWORKSPACE_Spring_JDBC\Spring_Anno_Tx"/>
+			<item value="D:\STSWORKSPACE_Spring_JDBC\Spring_Anno_Tx\src\main\java\com\an\config\ContConfig.java"/>
+			<item value="D:\STSWORKSPACE_Spring_JDBC\Spring_MappingSqlOperationAsSubClass"/>
+			<item value="D:\STSWORKSPACE_Spring_JDBC\Spring_jdbc_Query_Approch-2"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="ds.A"/>
+			<item value="ds.a"/>
+			<item value="ds"/>
+			<item value="ds.s"/>
+			<item value="ds.S"/>
+			<item value="ds.h"/>
+			<item value="ds.Test1"/>
+			<item value="ds.Spring_AnnoTx_2"/>
+			<item value="ds.TestConfig"/>
+			<item value="ds.Spring_dec_Transaction"/>
+			<item value="ds.Spring_Hibrenate_Curd"/>
+		</list>
+		<list key="groupId">
+			<item value="ds"/>
+		</list>
+		<list key="artifactId">
+			<item value="A"/>
+			<item value="a"/>
+			<item value="s"/>
+			<item value="S"/>
+			<item value="h"/>
+			<item value="Test1"/>
+			<item value="Spring_AnnoTx_2"/>
+			<item value="TestConfig"/>
+			<item value="Spring_dec_Transaction"/>
+			<item value="Spring_Hibrenate_Curd"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

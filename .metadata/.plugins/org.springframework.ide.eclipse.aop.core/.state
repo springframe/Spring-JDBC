@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Spring_Anno_Tx"/>
+<aop-project name="Spring_Jdbc_Classic_Aproch"/>
+<aop-project name="Spring_dec_Transaction_1"/>
+<aop-project name="Spring_dec_Transaction_2"/>
+<aop-project name="Spring_Hibrenate_Curd"/>
+<aop-project name="Spring_jdbc_Query_Approch-1"/>
+<aop-project name="Spring_jdbc_Query_Approch-2"/>
+</aop-reference-model>

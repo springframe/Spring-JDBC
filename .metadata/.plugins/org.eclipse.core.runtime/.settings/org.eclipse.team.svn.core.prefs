@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+externalMigrateFromAuthorizationDatabase/isMigrated=true
+migrateFromAuthorizationDatabase/isMigrated=true
+repositories/80d7da5307d400171308ad8931542f19=80d7da5307d400171308ad8931542f19;https\://orcl/svn/FCB/FCBDM;https\://orcl/svn/FCB/FCBDM;branches;tags;trunk;true;;;;false;;;0

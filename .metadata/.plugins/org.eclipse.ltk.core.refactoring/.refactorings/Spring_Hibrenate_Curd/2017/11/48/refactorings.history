@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;Spring_Hibrenate_Curd&apos;&#x0D;&#x0A;- Original project: &apos;Spring_Hibrenate_Curd&apos;&#x0D;&#x0A;- Original element: &apos;Spring_Hibrenate_Curd/src/main/java/ds.Spring_Hibrenate_Curd&apos;" description="Delete element" element1="/src\/main\/java&lt;ds.Spring_Hibrenate_Curd" element2="/src\/main\/java&lt;ds" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1511931850127" subPackages="false" version="1.0"/>
+</session>

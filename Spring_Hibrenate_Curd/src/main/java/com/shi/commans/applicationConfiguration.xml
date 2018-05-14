@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+<property name="username" value="spring"/>
+<property name="password" value="spring"/>
+</bean>
+
+<bean id="lsesfact" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+<property name="dataSource" ref="ds"/>
+<property name="mappingResources">
+<list>
+<value>com/shi/commans/hibernate.hbm.xml</value>
+</list>
+</property>
+<property name="hibernateProperties">
+<props>
+<prop key="hibernate.show_sql">true</prop>
+<prop key="hibernate.formate_sql">true</prop>
+<prop key="hibernate.hbm2ddl.auto">create</prop>
+<prop key="hibernate.dialect">org.hibernate.dialect.OracleDialect</prop>
+<prop key="connection.autocommit">true</prop>
+</props>
+</property>
+</bean>
+
+<bean id="htemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+<property name="sessionFactory" ref="lsesfact"/>
+  <property name="checkWriteOperations" value="false"/>
+</bean>
+<bean id="empdao" class="com.shi.dao.EmployeeDAO">
+<property name="htemplate" ref="htemplate"/>
+
+</bean>
+
+</beans>

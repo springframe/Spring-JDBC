@@ -1,0 +1,16 @@
+package com.an.config;
+
+import javax.activation.DataSource;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+public class JavaConfig {
+	
+	public DataSource newDataSource()
+	{
+		DriverManagerDataSource ds=new DriverManagerDataSource();
+	}
+
+}

@@ -1,0 +1,50 @@
+package com.qa.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+
+import com.qa.bo.CustomerBO;
+
+public class CustomerDAOImpl implements CustomerDAO {
+	private final String SQL_QRY_INSERT="INSERT INTO CUST_JDBC(SNO,FNAME,LNAME,EMAILADRESS,MBNO) VALUES(?,?,?,?,?)";
+	private final String SQL_QRY_INSERT_By_KeyAutoGenerate="INSERT INTO CUST_JDBC(SNO,FNAME,LNAME,EMAILADRESS,MBNO) VALUES(?,?,?,?)";
+	private JdbcTemplate jt;
+	
+	public void setJt(JdbcTemplate jt) {
+		this.jt = jt;
+	}
+/*	@Override
+	public String InsertCustBo(CustomerBO cbo) {
+		 
+        int a=jt.update(SQL_QRY_INSERT, cbo.getSNO(),cbo.getFNAME(),cbo.getLNAME(),cbo.getEMAILADRESS(),cbo.getMBNO());
+        if(a!=0)
+		return "RECORD INSERT SUCESSFULLY with id=:"+a;
+        else 
+			return "RECORD NOT UPDATE SUCESSFULLY";
+	}*/
+GeneratedKeyHolder gkh=new GeneratedKeyHolder();
+	@Override
+	public String InsertCustBoByAutoGenerate(CustomerBO cbo) {
+      jt.update(new PreparedCustAutoGenerato(), new generatedKeyHolder[] {})
+		return null;
+	}
+private final class PreparedCustAutoGenerato implements PreparedStatementCreator
+{
+  private String sno;
+	public PreparedCustAutoGenerato(String sno) {
+	this.sno = sno;
+	}
+	@Override
+	public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
+    PreparedStatement pstmt=con.prepareStatement(SQL_QRY_INSERT_By_KeyAutoGenerate, new String[] {"sno"});
+		pstmt.setString(1,sno);
+		return pstmt;
+	}
+	
+}
+}

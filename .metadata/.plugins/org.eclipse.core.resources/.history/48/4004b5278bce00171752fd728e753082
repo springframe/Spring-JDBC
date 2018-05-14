@@ -1,0 +1,57 @@
+package com.npjt.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import com.npjt.bo.CustomerBO;
+
+public class CustomerDAOImpl implements CustomerDAO {
+	private final String SQL_GET_BY_NO = "SELECT SNO FNAME,LNAME,EMAILADRESS FROM CUST_NPJT WHERE SNO=:sid";
+	private NamedParameterJdbcTemplate npjt;
+
+	public void setNpjt(NamedParameterJdbcTemplate npjt) {
+		this.npjt = npjt;
+	}
+
+   
+
+	@Override
+	public List<CustomerBO> getCustDetailByNo(int sno) {
+
+			System.out.println(sno);
+			Map<String, Object> map = new HashMap<String, Object>();
+			map.put("sid", sno);
+			//return npjt.query(SQL_GET_BY_NO, map, new CustRowMapper());
+			List<CustomerBO> c=npjt.query(SQL_GET_BY_NO, map, new CustRowMapper());
+			return c;
+		}
+
+	private final class CustRowMapper implements RowMapper<CustomerBO>{
+
+		@Override
+		public CustomerBO mapRow(ResultSet rs, int row) throws SQLException {
+       List<CustomerBO> lcbo=new ArrayList<>();
+       CustomerBO cbo=new CustomerBO();
+         cbo.setSno(rs.getInt(1));
+         cbo.setFname(rs.getString(2));
+         cbo.setLname(rs.getString(3));
+		/* cbo.setEmailAdress(rs.getString(4));	
+		 cbo.setMbno(rs.getLong(5));*/
+		 
+			return cbo;
+		}
+
+	
+
+	}
+
+
+	
+}

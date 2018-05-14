@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;mappingSqlOperationAsSubClass&apos; to &apos;Spring_MappingSqlOperationAsSubClass&apos;&#x0D;&#x0A;- Original element: &apos;mappingSqlOperationAsSubClass&apos;&#x0D;&#x0A;- Renamed element: &apos;mappingSqlOperationAsSubClass&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;mappingSqlOperationAsSubClass&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=mappingSqlOperationAsSubClass" name="Spring_MappingSqlOperationAsSubClass" references="true" stamp="1511587023738" version="1.0"/>
+</session>

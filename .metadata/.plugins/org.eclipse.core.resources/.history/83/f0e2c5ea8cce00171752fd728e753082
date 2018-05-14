@@ -1,0 +1,10 @@
+package com.npjt.dao;
+
+import java.util.List;
+
+import com.npjt.bo.CustomerBO;
+
+public interface CustomerDAO {
+	public  List<CustomerBO> getCustDetailByNo(int sno);
+
+}

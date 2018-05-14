@@ -1,0 +1,29 @@
+package com.an.config;
+
+import javax.activation.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+@PropertySource(value="com/dectx/commans/db.properties")
+@ComponentScan(basePackageClasses= {"",""})
+public class JavaConfig {
+	
+	@Autowired
+	Environment env;
+	public DriverManagerDataSource newDataSource()
+	{
+		DriverManagerDataSource ds=new DriverManagerDataSource();
+		ds.setDriverClassName(env.getProperty("db.driverClassNmae"));
+		ds.setUrl(env.getProperty("db.url"));
+		ds.setUsername(env.getProperty("db.usn"));
+		ds.setPassword(env.getProperty("db.pwd"));
+		return ds;
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.qa.dao;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.qa.bo.CustomerBO;
+
+public class CustomerDAOImpl implements CustomerDAO {
+	private final String SQL_QRY_FOR_GETDETAILS="SELECT FNAME,LNAME,EMAILADRESS,MBNO FROM CUST_JDBC WHERE SNO=?";
+	private JdbcTemplate jt;
+	public void setJt(JdbcTemplate jt) {
+		this.jt = jt;
+	}
+
+/*	 SNO                                                NUMBER(20)
+	 FNAME                                              VARCHAR2(20)
+	 LNAME                                              VARCHAR2(20)
+	 EMAILADRESS                                        VARCHAR2(20)
+	 MBNO                                               NUMBER(20)
+	 */
+	@Override
+	public List<CustomerBO> findDetail(int no) {
+	int a=jt.queryForInt(SQL_QRY_FOR_GETDETAILS, no);
+		return a;
+	}
+
+}

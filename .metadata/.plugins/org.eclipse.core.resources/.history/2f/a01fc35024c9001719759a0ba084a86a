@@ -1,0 +1,30 @@
+package com.qa.dao;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.qa.bo.CustomerBO;
+
+public class CustomerDAOImpl implements CustomerDAO {
+	private final String SQL_QRY_FOR_GETDETAILS="SELECT COUNT(*)FROM CUST_JDBC";
+	private JdbcTemplate jt;
+	public void setJt(JdbcTemplate jt) {
+		this.jt = jt;
+	}
+	@Override
+	public int findDetail() {
+		// TODO Auto-generated method stub
+		int cbo=jt.queryForInt(SQL_QRY_FOR_GETDETAILS, no);
+		return null;
+	}
+
+/*	 SNO                                                NUMBER(20)
+	 FNAME                                              VARCHAR2(20)
+	 LNAME                                              VARCHAR2(20)
+	 EMAILADRESS                                        VARCHAR2(20)
+	 MBNO                                               NUMBER(20)
+	 */
+	
+
+}

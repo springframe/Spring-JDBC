@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.1.201710100539-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/main/java/com/dectx/commans/application-context.xml</config>
+		<config>src/main/java/com/dectx/commans/persistency-bean.xml</config>
+		<config>src/main/java/com/dectx/commans/service-bean.xml</config>
+		<config>src/main/java/com/dectx/commans/controller-bean.xml</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>
